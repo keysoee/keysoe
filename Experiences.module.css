@@ -1,0 +1,164 @@
+.experienceList {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.experienceItem {
+  background: linear-gradient(135deg, #FFFFFF 0%, #FFF5F7 100%);
+  border-radius: 15px;
+  border-left: 5px solid var(--primary);
+  box-shadow: 0 4px 15px rgba(197, 71, 92, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.expImageHeader {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+}
+
+.expImageHeader img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.experienceItem .itemHeader {
+  padding: 1.5rem;
+}
+
+.experienceItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(197, 71, 92, 0.2);
+}
+
+.experienceItem.expanded {
+  grid-column: 1 / -1;
+}
+
+.itemHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.headerContent {
+  flex: 1;
+}
+
+.experienceItem h3 {
+  margin: 0 0 0.4rem 0;
+  color: var(--text);
+  font-size: 1.1rem;
+  font-weight: 700;
+  line-height: 1.3;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.company {
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0.2rem 0;
+  font-size: 0.85rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.period {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  color: white;
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: 0.3rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.expandIcon {
+  flex-shrink: 0;
+  color: var(--primary);
+  font-size: 1.2rem;
+  transition: transform 0.3s ease;
+}
+
+.expanded .expandIcon {
+  transform: rotate(180deg);
+}
+
+.itemContent {
+  margin-top: 0;
+  padding: 0 1.5rem 1.5rem 1.5rem;
+  border-top: 2px solid rgba(197, 71, 92, 0.15);
+  animation: slideDown 0.3s ease-out;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.location {
+  color: #6B6B6B;
+  font-size: 0.85rem;
+  margin: 0 0 1rem 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.taskList {
+  padding-left: 1.5rem;
+  margin: 0 0 1rem 0;
+  color: var(--text);
+  line-height: 1.7;
+}
+
+.taskList li {
+  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.taskList li::marker {
+  color: var(--primary);
+}
+
+.technologies {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(197, 71, 92, 0.2);
+  color: #6B6B6B;
+  font-size: 0.85rem;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.technologies strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .experienceList {
+    grid-template-columns: 1fr;
+  }
+
+  .itemHeader {
+    flex-wrap: wrap;
+  }
+
+  .experienceItem h3 {
+    font-size: 1rem;
+  }
+}
+

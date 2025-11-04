@@ -1,0 +1,35 @@
+:root {
+  --bg: #FFF5F7; /* Soft pink white background */
+  --text: #2C2C2C; /* Soft dark text */
+  --primary: #C5475C; /* Rose pink */
+  --secondary: #FFE5EC; /* Very light pink for secondary elements */
+  --accent: #E8A5B8; /* Light rose accent */
+}
+
+html, body, #__next {
+  height: 100%;
+}
+
+body {
+  font-family: 'Playfair Display', 'Georgia', 'Times New Roman', serif;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
